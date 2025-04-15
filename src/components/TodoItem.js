@@ -73,7 +73,7 @@ const TodoItem = ({ todo, onDelete, onToggle, onUpdate }) => {
             </span>
           </div>
           <div style={{ display: 'flex', gap: '10px' }}>
-            {!isCompleted && ( // Chỉ hiển thị nút "Sửa" nếu chưa hoàn thành
+            {!isCompleted && ( 
               <button
                 onClick={handleEdit}
                 style={{ padding: '5px 10px', background: '#007bff', color: 'white', border: 'none', borderRadius: '5px' }}
