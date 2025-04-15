@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoItem from './TodoItem';
 
-const TodoList = ({ todos, onDelete, onToggle, filter, setFilter, onClearAll }) => {
+const TodoList = ({ todos, onDelete, onToggle, onUpdate, filter, setFilter, onClearAll }) => {
   const filteredTodos = todos.filter(todo => {
     if (filter === 'completed') return todo.completed;
     if (filter === 'active') return !todo.completed;
@@ -75,6 +75,7 @@ const TodoList = ({ todos, onDelete, onToggle, filter, setFilter, onClearAll }) 
               todo={todo}
               onDelete={onDelete}
               onToggle={onToggle}
+              onUpdate={onUpdate} // Truyền prop update
             />
           ))}
         </ul>
