@@ -25,14 +25,19 @@ const TodoItem = ({ todo, onDelete, onToggle }) => {
         />
         <span style={{
           marginLeft: '10px',
-          textDecoration: isCompleted ? 'line-through' : 'none'
+          textDecoration: isCompleted ? '' : 'none'
         }}>
           {todo.title || todo.text}
         </span>
       </div>
       <button
         onClick={() => onDelete(todo.id)}
-        style={{ color: 'red', border: 'none', background: 'transparent' }}
+          style={{
+            padding: '5px 10px',
+            background: '#dc3545',
+            color: 'white',
+            border: 'none',
+            borderRadius: '5px' }}
       >
         Xóa
       </button>
